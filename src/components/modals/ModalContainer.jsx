@@ -17,22 +17,22 @@ function ModalContainer({ children }) {
 
     return (
         <div className='modal-wrapper'>
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Modal {modal}</h5>
+            <div className="modal-dialog">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <h5 className="modal-title">Modal {modal}</h5>
 
                     </div>
                     {children}
-                    <div class="modal-footer">
+                    <div className="modal-footer">
                         <Link to="/modal-a">
-                            <button type="button" class="btn btn-primary" onClick={() => chooseModal("A")}>Modal A</button>
+                            <button type="button" className="btn btn-primary" onClick={() => chooseModal("A")}>Modal A</button>
                         </Link>
                         <Link to="/modal-b">
-                            <button type="button" class="btn btn-primary" onClick={() => chooseModal("B")}>Modal B</button>
+                            <button type="button" className="btn btn-primary" onClick={() => chooseModal("B")}>Modal B</button>
                         </Link>
                         <Link to="/">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick={closeModal}>Close</button>
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={closeModal}>Close</button>
                         </Link>
                     </div>
                 </div>

@@ -22,7 +22,6 @@ function ModalA() {
     }
 
     const handleScroll = () => {
-        console.log("scroll")
         const scrollTop = refScroll.current.getValues().scrollTop;
         const scrollHeight = refScroll.current.getValues().scrollHeight;
         const clientHeight = refScroll.current.getValues().clientHeight;
@@ -32,7 +31,6 @@ function ModalA() {
             // Increment the page number
             getAllContacts(page + 1).then(res => {
                 setPage(prev => prev + 1)
-                console.log('updated contacts:', res)
                 dispatch({ type: "UPDATE_CONTACTS", payload: res })
             }).then(res => setLoadingNewContacts(false))
         }
@@ -56,7 +54,6 @@ function ModalA() {
                         <Scrollbars ref={refScroll} onScroll={handleScroll}>
                             {
                                 contacts_ids.map(id => {
-                                    console.log(contacts[id].fir)
                                     const fullName = contacts[id].first_name ? contacts[id].first_name + contacts[id].last_name : "No Name"
                                     const phoneNumber = contacts[id].full_phone_number
 

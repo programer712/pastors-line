@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux'
 
 function ModalC() {
     const { current_contact } = useSelector(state => state.contacts)
-    console.log({ current_contact })
 
     return (
         <ModalContainer>

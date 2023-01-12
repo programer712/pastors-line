@@ -8,7 +8,6 @@ import { useSelector, useDispatch } from 'react-redux';
 const App = () => {
     const { modal } = useSelector(state => state.modal)
     const { isLoading } = useSelector(state => state.contacts)
-    console.log(isLoading)
     const dispatch = useDispatch()
 
     const openModal = (payload, request) => {
@@ -16,7 +15,6 @@ const App = () => {
 
         if (request === "US") {
             getUSContacts(1).then(res => {
-                console.log(res)
                 dispatch({ type: "SET_CONTACTS", payload: res })
             })
         }
